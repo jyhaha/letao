@@ -1,0 +1,90 @@
+//页面的公共样式,初始化样式
+//网站主题色
+@mainColor: #006699;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    /*一般移动端清除a的点击高亮  透明就表示去掉*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+
+img {
+    /* 解决图片3px的间距 */
+    vertical-align: middle;
+}
+
+//头部区域
+#header {
+    width: 100%;
+    height: 45px;
+    background-color: @mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+    color: #fff;
+    //头部标题
+    >h4 {
+        line-height: 45px;
+        margin: 0;
+        display: inline-block;
+        font-weight: normal;
+        font-size: 16px;
+    }
+    //头部搜索icon
+    >a {
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+//main内容区有一个padding,防止给头部遮住
+#main {
+    padding: 45px 0;
+}
+
+//尾部区域公共部分
+#footer {
+    background-color: @mainColor;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    >.mui-row {
+        >div {
+            padding-top: 5px;
+            >a {
+                display: block;
+                text-align: center;
+                color: #fff;
+                >p {
+                    padding: 3px 0px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

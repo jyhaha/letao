@@ -1,0 +1,128 @@
+//导入公共样式
+@import url("./base.less");
+//主要内容内的
+//导航部分
+body {
+    background-color: #fff;
+}
+
+.nav {
+    padding: 10px;
+    >.mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//图片区域
+.banner {
+    height: 250px;
+    padding: 0 10px;
+    overflow: hidden;
+    //图片左边
+    .mui-row {
+        height: 240px;
+        overflow: hidden;
+        >.product-left {
+            >.top {
+                font-size: 0; //清除a标签默认的间距
+                >a {
+                    display: inline-block;
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            >.bottom {
+                height: 50%;
+                font-size: 0; //清除a标签默认的间距
+                >a {
+                    display: inline-block;
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        //图片右边
+        >.product-right {
+            >a {
+                display: block;
+                width: 100%;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//运动区域
+.sprots {
+    padding: 0 10px;
+    >.mui-row {
+        .sprots-headTitle {
+            >img {
+                width: 100%;
+            }
+        }
+        .sprots-headLogo {
+            >.sprots-headLogo-content {
+                display: flex;
+                flex-wrap: wrap;
+                >a {
+                    display: block;
+                    width: 25%;
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .sprots-footerTitle {
+            >img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//女士专区
+.woman,
+.man,
+.hello {
+    padding: 0 10px 10px;
+    >.mui-row {
+        >div {
+            padding: 10px;
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, .5);
+            text-align: center;
+            >a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                .product-price {
+                    color: red;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+    >.womantitle {
+        margin-top: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
