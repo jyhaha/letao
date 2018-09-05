@@ -1,0 +1,88 @@
+@import url("./base.less");
+//头部区域
+#header {
+    >.icon_back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #fff;
+        padding: 11px 15px;
+        >i {
+            font-size: 22px;
+        }
+    }
+}
+
+//内容区域
+#main {
+    background-color: #fff;
+    padding: 10px;
+    //搜索按钮与输入框
+    >.search-content {
+        display: flex;
+        >form {
+            flex: 1;
+            input {
+                width: 100%;
+                text-align: left;
+                height: 35px;
+                background-color: #fff;
+                border: 1px solid @mainColor;
+                border-radius: 6px 0 0 6px;
+                border-right: 0;
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+        >button {
+            width: 60px;
+            height: 35px;
+            border: 0;
+            background-color: @mainColor;
+            border-radius: 0 6px 6px 0;
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    //搜索历史与清空纪录
+    >.search-history {
+        margin-top: 10px;
+        >.mui-clearfix {
+            >span {
+                display: block;
+                color: #666;
+                &:first-of-type {
+                    float: left;
+                }
+                &:last-of-type {
+                    float: right;
+                }
+            }
+        }
+    }
+    //搜索列表
+    >.searchList {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        >li {
+            padding: 0 10px;
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            >a {
+                flex: 1;
+                line-height: 30px;
+                display: inline-block;
+            }
+            >i {
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+                line-height: 30px;
+                padding: 0 20px;
+            }
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+    }
+}

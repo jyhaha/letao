@@ -1,0 +1,80 @@
+@import url("./base.less");
+//分类页面头部区域
+#header {
+    //返回按钮
+    display: flex;
+    >.getBack {
+        text-align: center;
+        vertical-align: middle;
+        padding: 14px 15px 10px;
+        color: #fff;
+    }
+    //搜索表单
+    >.search {
+        flex: 1;
+        padding-top: 5px;
+        >input {
+            margin: 0;
+            background-color: #fff;
+            text-align: center;
+            color: #000;
+        }
+    }
+    //搜索图标
+    >.search-icon {
+        padding: 10px 15px;
+        position: static;
+    }
+}
+
+//内容区域
+#main {
+    display: flex;
+    //左边分类
+    .cate-slide-left {
+        position: relative;
+        z-index: 9999;
+        >ul {
+            >li {
+                height: 45px;
+                >a {
+                    display: block;
+                    width: 80px;
+                    line-height: 45px;
+                    text-align: center;
+                    &.active {
+                        background-color: #c9c9c9;
+                    }
+                }
+            }
+        }
+    }
+    //右边商品展示
+    >.mui-scroll-wrapper {
+        position: relative;
+        >.mui-scroll {
+            >.cate-content-right {
+                flex: 1;
+                >ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    >li {
+                        width: 33.3333%;
+                        >a {
+                            width: 100%;
+                            height: 55px;
+                            line-height: 55px;
+                            display: block;
+                            text-align: center;
+                            background-color: #fff;
+                            img {
+                                width: 66px;
+                                height: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
