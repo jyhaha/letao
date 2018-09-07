@@ -25,6 +25,8 @@ Letao.prototype = {
             //阻止button在表单中的默认事件
             var e = e || window.event;
             e.preventDefault();
+            //点击重定向到searchList.html
+            location.href = "./searchList.html";
             // 点击获取input输入的value值,没有则return
             var $searchVal = $(".search-input").val();
             if (!$searchVal.trim()) {
@@ -97,11 +99,11 @@ Letao.prototype = {
 
     //清空搜索纪录
     clearHistoryAll: function(that) {
-        $(".icon_clear").on("tap", function() {
-            localStorage.removeItem("historyArr");
-            that.initHistory();
-        })
+            $(".icon_clear").on("tap", function() {
+                localStorage.removeItem("historyArr");
+                that.initHistory();
+            })
 
-    }
-    //
+        }
+        //
 }

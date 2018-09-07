@@ -188,8 +188,19 @@
     <script src="lib/zepto/zepto.min.js"></script>
     <!-- 7. 引入模板引擎的js文件 -->
     <script src="lib/artTemplate/template.js"></script>
+    <!-- 左边分类标题的模板 -->
+    <script type="text/html" id="classifyTmp">
+        <!-- 默认给第一个分类添加一个高亮 -->
+        {{ each list.rows as value i}} {{ if i==0 }}
+        <li><a href="#" class="gaoliang active" data-id="{{value.id}}">{{value.categoryName}}</a></li>
+        {{/if}}
+        <li><a href="#" class="gaoliang" data-id="{{value.id}}">{{value.categoryName}}</a></li>
+        {{/each}}
+    </script>
     <!-- 8. 引入主页的js文件 -->
     <script src="js/index.js"></script>
+    <!-- 引入分类js文件 -->
+    <script src="js/classify.js"></script>
 </body>
 
 </html>

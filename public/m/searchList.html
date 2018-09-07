@@ -20,14 +20,14 @@
 <body>
     <!-- 头部区域 -->
     <header id="header">
-        <a href="./classify.html" class="icon_back"><i class=" fa fa-arrow-left"></i></a>
+        <a href="./search.html" class="icon_back"><i class=" fa fa-arrow-left"></i></a>
         <h4>乐淘云购</h4>
     </header>
     <!-- 内容区域 -->
     <main id="main">
         <!-- 搜索按钮 -->
         <div class="search-content">
-            <form action="./searchList.html">
+            <form action="">
                 <input type="search" class="search-input" placeholder="搜索你喜欢的商品">
             </form>
             <button class="btn-search">搜索</button>
@@ -77,17 +77,8 @@
     <script src="lib/zepto/zepto.min.js"></script>
     <!-- 7. 引入模板引擎的js文件 -->
     <script src="lib/artTemplate/template.js"></script>
-    <!-- 模板工具 -->
-    <script id="historyTmp" type="text/html">
-        {{ if list }} {{ each list as value i}}
-        <li><a href="">{{list[i].value}}</a><i class="icon_delete fa fa-close" data-id="{{list[i].id}}"></i > </li>
-          {{/each}}
-     {{ else }}     
-     <li><a href="">没有搜索历史</a> </li>
-     {{/if}}
-    </script>
     <!-- 8. 引入主页的js文件 -->
-    <script src="js/search.js"></script>
+    <script src="js/searchList.js"></script>
 </body>
 
 </html>
